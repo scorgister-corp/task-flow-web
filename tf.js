@@ -1,5 +1,5 @@
 const srv = require("./server");
 
-new srv.WWWHandler("/", true, "./www/root/");
+new srv.WWWHandler("/", false, "./www/root/");
 
 module.exports.start = srv.start;
