@@ -1,4 +1,3 @@
-
 var handlers = []
 
 class Handler {
@@ -41,7 +40,7 @@ class Handler {
         }
     }
 
-    _doSomething(req, res, method, tokenRegister) {
+    _doSomething(req, res, method, auth) {
         if(this.tokenable) {
             var cookie = req.headers["cookie"];
 
@@ -49,10 +48,10 @@ class Handler {
                 this.send401(res);
                 return;
             }
-            var userId = getCookie("user_id", cookie);
-
-            if(userId != undefined) {
-                tokenRegister.isValidUserId(userId, (valid) => {
+            var token = getCookie("token", cookie);
+            
+            if(token != undefined) {
+                auth.isValidToken(token, (valid) => {
                     if(valid)
                         this.#_switchProtocole(req, res, method);
                     else

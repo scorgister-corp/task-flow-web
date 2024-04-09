@@ -2,7 +2,9 @@ const http = require("http");
 const mime = require("mime");
 const fs = require("fs");
 const Handler = require("./handler");
-const tokenRegister = require("./token");
+const token = require("./token");
+
+const auth = token("http://localhost:8200");
 
 var beta = false;
 
@@ -17,7 +19,7 @@ const requestListener = function(req, res) {
         return;
     }
 
-    handler._doSomething(req, res, method, tokenRegister);
+    handler._doSomething(req, res, method, auth);
     
 }
 function start(host, port, isBeta=false) {
@@ -73,7 +75,7 @@ class WWWHandler extends Handler {
             endPoint = "index.html";
 
         endPoint = endPoint.split("?")[0];
-
+    
         try {
             this.sendFile(res, endPoint);
             return;
@@ -133,7 +135,6 @@ class WWWHandler extends Handler {
 
 }
 
-module.exports.tokenRegister = tokenRegister;
 module.exports.start = start;
 module.exports.APIHandler = APIHandler;
 module.exports.WWWHandler = WWWHandler;

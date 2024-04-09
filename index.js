@@ -1,4 +1,4 @@
-const ferdi = require("./ferdi");
+const taskFlowSrv = require("./tf");
 
 const args = process.argv;
 
@@ -9,4 +9,4 @@ var isBeta = false;
 if(args.length > 2)
     isBeta = args[2]=="true"?true:false;
 
-ferdi.start(host, port, isBeta);
+taskFlowSrv.start(host, port, isBeta);

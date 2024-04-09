@@ -6,25 +6,22 @@ class Auth {
         this.baseURL = baseURL;
     }
     
-    isValidUserId(token, callback) {
-        const currTime = Date.now();
+    isValidToken(token, callback) {
         
-        request.sendPost(this.baseURL + "/auth")
-        
-        db.exists(path).then((exist) => {
-            if(!exist) {
+        request.sendGet(this.baseURL + "/auth", token, (success, result) => {
+            if(!success) {
                 callback(false);
                 return;
             }
-            db.getData(path).then((value) => {
-                if(value["end"] == undefined)
-                    callback(false);
-                else
-                    callback(currTime < value["end"]);
-            });
+
+            callback(result["valid"] === true);
         });
-    }
+    } 
     
 }
 
-module.exports.isValidUserId = isValidUserId;
+function createAuth(baseURL) {
+    return new Auth(baseURL);
+}
+
+module.exports = createAuth;

@@ -1,0 +1,31 @@
+{
+  "name": "task-flow-web",
+  "version": "1.0.0",
+  "description": "Web server for taskflow project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scorgister-corp/task-flow-web.git"
+  },
+  "keywords": [
+    "web",
+    "server",
+    "task",
+    "flow",
+    "taskflow"
+  ],
+  "author": "Scorgister, corp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scorgister-corp/task-flow-web/issues"
+  },
+  "homepage": "https://github.com/scorgister-corp/task-flow-web#readme",
+  "dependencies": {
+    "mime": "^3.0.0",
+    "xmlhttprequest": "^1.8.0"
+  }
+}

@@ -1,3 +1,5 @@
+const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest
+
 function createXMLHttpRequest(method, url) {
     var xhr = new XMLHttpRequest();
     xhr.open(method, url, true);
@@ -9,9 +11,9 @@ function sendPost(url, token, body, response = function() {}) {
     var xhr = createXMLHttpRequest("POST", url);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.setRequestHeader("X-Application-Auth", token);
-
-    xhr.overrideMimeType('application/json; charset=utf-8');
-
+    
+    //xhr.overrideMimeType('application/json; charset=utf-8');
+    
     xhr.onreadystatechange = function() {
         result(xhr, response);
     };
@@ -26,7 +28,7 @@ function sendGet(url, token, response = function() {}) {
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.setRequestHeader("X-Application-Auth", token);
 
-    xhr.overrideMimeType('application/json; charset=utf-8');
+   // xhr.overrideMimeType('application/json; charset=utf-8');
     
     xhr.onreadystatechange = function() {
         result(xhr, response);
@@ -48,7 +50,7 @@ function sendPostFormData(url, formData, response = function() {}) {
 function result(xhr, response) {
     if(xhr.readyState === 4) {
         try {
-            var obj = JSON.parse(xhr.response);
+            var obj = JSON.parse(xhr.responseText);
             try {
                 if(obj != null)
                     response(true, obj);
@@ -64,4 +66,3 @@ function result(xhr, response) {
 module.exports.sendGet = sendGet;
 module.exports.sendPost = sendPost;
 module.exports.sendPostFormData = sendPostFormData;
-module.exports.getCookie = getCookie;
