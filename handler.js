@@ -107,6 +107,7 @@ class Handler {
         res.statusCode = statusCode;
         res.setHeader("Content-Type", contentType);
         res.setHeader("X-Robots-Tag", "noindex, nofollow");
+        res.setHeader("Access-Control-Allow-Origin", "https://api.taskflow.scorgister.net");
 
         if(contentType == "application/json" && !isWeb)
             message = JSON.stringify(message);
