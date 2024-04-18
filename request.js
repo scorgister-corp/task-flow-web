@@ -11,9 +11,7 @@ function sendPost(url, token, body, response = function() {}) {
     var xhr = createXMLHttpRequest("POST", url);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.setRequestHeader("X-Application-Auth", token);
-    
-    //xhr.overrideMimeType('application/json; charset=utf-8');
-    
+        
     xhr.onreadystatechange = function() {
         result(xhr, response);
     };
@@ -27,8 +25,6 @@ function sendGet(url, token, response = function() {}) {
     var xhr = createXMLHttpRequest("GET", url);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.setRequestHeader("X-Application-Auth", token);
-
-   // xhr.overrideMimeType('application/json; charset=utf-8');
     
     xhr.onreadystatechange = function() {
         result(xhr, response);

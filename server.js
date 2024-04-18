@@ -4,7 +4,7 @@ const fs = require("fs");
 const Handler = require("./handler");
 const token = require("./token");
 
-const auth = token("http://localhost:8200");
+const auth = token("http://api.taskflow.scorgister.net");
 
 var beta = false;
 
