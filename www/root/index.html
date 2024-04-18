@@ -3,47 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Flow</title>
+    <title>TaskFlow</title>
+    <link rel="stylesheet" href="/css/index_style.css">
+
     <link rel="stylesheet" href="/css/tf_style.css">
+    <link rel="stylesheet" href="/css/tf_mainbox.css">
+    <link rel="stylesheet" href="/css/tf_form.css">
 </head>
 <body>
     <header>
-        <div id="header-bubble-container">
-            <div id="bubble-1" class="bubble-btn">
-
+        <div class="header-container">
+            <div id="header-left">
+                <a href="#"><img src="/img/64x64.png"></a>
             </div>
-            <div id="bubble-2" class="bubble-btn">
-
-            </div>
-            <div id="bubble-3" class="bubble-btn">
-
-            </div>
-            <div id="bubble-4" class="bubble-btn">
-
-            </div>
-            <div id="bubble-5" class="bubble-btn">
-
+            <div id="header-right">
+                <a href="login.html">Log in</a>
             </div>
         </div>
     </header>
-    <div id="main">
-        <div id="left-container">
-            <div id="main-sticker">
-                <div class="main-sticker">
-                    <div class="sticker-round"></div>
-                    <div class="sticker-rect"></div>
-                </div>
-            </div>
-        </div>
-        <div id="right-container">
-            <div class="bottom-info-box">
-                <div class="bottom-info-box-text">
-                    <h3 class="title-bottom-info-box">Gestionnaire de tâche en ligne</h3>
-                    <p class="text-bottom-info-box">Simplifiez votre gestion quotidienne de tâches avec TaskFlow</p>
-                </div>
-                <div class="circle-bottom-info-box"></div>
-            </div>
-        </div>
+    <div id="banner">
+        <!-- JS -->
     </div>
+    <div id="main">
+        <div class="text-container container">
+            <h2 class="title">Online Task Manager</h2>
+            <pre>Streamline your daily Task
+management with TaskFlow</pre>
+        </div>
+        <div class="center container">
+           <a href="signup.html"><button class="grad-btn">Get started</button></a>
+        </div>
+
+        <div class="center container">
+            <img src="/img/512x512.png">
+            <br>
+            <br>
+            <br>
+            <hr class="small-hr">
+         </div>
+    </div>
+    <div class="center text-container container">
+        <h2 class="title">A platform<br>designed for growth</h2>
+    </div>
+    <footer>
+        <div class="form-footer">
+            <h2>contact us:</h2>
+            <div class="contactus-form">
+                <div class="contactus-left">
+                    <input type="text" name="name" placeholder="name">
+                    <input type="email" name="email" placeholder="email">
+                </div>
+                <textarea  placeholder="message"></textarea>
+            </div>
+            <button id="form-send" class="grad-btn">Send</button>
+        </div>
+        <p class="copyright">© 2024 Scorgister, corp. All Rights Reserved. | <a href="/policy.html">Privacy Policy</a> | <a href="/conditions.html">Terms & Conditions</a></p>
+    </footer>
 </body>
 </html>

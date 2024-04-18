@@ -1,0 +1,85 @@
+:root {
+    --light-btn-color: #efd9d9;
+    --dark-btn-color: rgb(194, 161, 161)
+}
+
+
+button {
+    margin: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 15px;
+
+    border-radius: 8px;
+    font-weight: bolder;
+}
+
+.confirm-btn {
+    background-color: var(--light-btn-color);
+    color: var(--light-color);
+
+    transition: .5s;
+}
+
+.confirm-btn:hover {
+    background-color: var(--dark-btn-color);
+    color: var(--dark-color);
+    transition: .5s;
+
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea {
+    margin: 5px;
+    font-size: 20px;
+
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
+
+    border-radius: 5px;
+}
+
+
+.grad-btn {
+    background: var(--light-color);
+    background: var(--background-gradiant);
+
+    color: rgb(206, 206, 206);
+
+    font-size: 25px;
+
+    border-width: 0px;
+
+    box-shadow: 0 0 15px var(--light-color);
+    transition: .5s;
+}
+
+.grad-btn:hover {
+    box-shadow: 0 0 15px var(--dark-color);
+    transition: .5s;
+
+}
+
+.contactus-form {
+    display: flex;
+    width: 50%;
+}
+
+.contactus-left {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 15px;
+    display: grid;
+}
+
+.contactus-left > input {
+    margin-top: 20px;
+}
+
+.form-footer {
+    margin-left: 30px;
+    text-align: start;
+}
