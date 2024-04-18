@@ -60,6 +60,10 @@ footer {
     text-align: center;
 }
 
+a:link {
+    color: #3777CA;
+}
+
 a:visited {
     color: #f44336;
 }

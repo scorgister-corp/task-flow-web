@@ -5,11 +5,14 @@ function createXMLHttpRequest(method, url) {
     return xhr;
 }
 
-function sendPost(url, token, body, response = function() {}) {
-    var xhr = createXMLHttpRequest("POST", url);
+function sendPost(url, body, response = function() {}) {
+    var xhr = createXMLHttpRequest("POST", "https://api.taskflow.scorgister.net" + url);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.setRequestHeader("Cookies", document.cookie);
-    if(token != null && token != undefined && toekn != "")
+
+    token = getCookie("token");
+
+    if(token != null && token != undefined && token != "")
         xhr.setRequestHeader("X-Application-Auth", token)
 
     xhr.overrideMimeType('application/json; charset=utf-8');
@@ -23,11 +26,14 @@ function sendPost(url, token, body, response = function() {}) {
     xhr.send(body);
 }
 
-function sendGet(url, token, response = function() {}) {
-    var xhr = createXMLHttpRequest("GET", url);
+function sendGet(url, response = function() {}) {
+    var xhr = createXMLHttpRequest("GET", "https://api.taskflow.scorgister.net" + url);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.setRequestHeader("Cookies", document.cookie);
-    if(token != null && token != undefined && toekn != "")
+
+    token = getCookie("token");
+
+    if(token != null && token != undefined && token != "")
         xhr.setRequestHeader("X-Application-Auth", token)
 
     xhr.overrideMimeType('application/json; charset=utf-8');
@@ -40,7 +46,7 @@ function sendGet(url, token, response = function() {}) {
 }
 
 function sendPostFormData(url, formData, response = function() {}) {
-    var xhr = createXMLHttpRequest("POST", url);
+    var xhr = createXMLHttpRequest("POST", "https://api.taskflow.scorgister.net" + url);
     xhr.withCredentials = true;
     xhr.setRequestHeader("Cookies", document.cookie);
 
@@ -126,4 +132,8 @@ String.prototype.countocc = function(characterToCount) {
     }
   
     return count;
+}
+
+function hash(string) {
+    return digest("sha-256", string)
 }

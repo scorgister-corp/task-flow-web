@@ -8,7 +8,6 @@ body {
 
 }
 
-
 footer {
     margin-bottom: 0px;
     background-color: var(--main-header-bg-color);
@@ -25,4 +24,18 @@ footer {
 .copyright {
     margin-top: 40px;
     margin-bottom: 0px;
+}
+
+#banner {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.banner-text {
+    word-break: keep-all;
+
+    font-size: 80px;
+    font-weight: bolder;
+    margin-top: 20px;
+    margin-left: 50px;
 }

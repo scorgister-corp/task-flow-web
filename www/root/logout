@@ -1,0 +1,5 @@
+<script lang="javascript" src="js/request.js"></script>
+<script lang="javascript">
+    eraseCookie("token");
+    window.location = "/";
+</script>
