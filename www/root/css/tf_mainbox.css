@@ -1,0 +1,79 @@
+:root {
+    --light-color: rgb(84, 24, 43);
+    --dark-color: rgb(49, 23, 43);
+    --background-gradiant: linear-gradient(130deg, var(--light-color) 50%, var(--dark-color) 100%);
+
+    --light-btn-color: #efd9d9;
+    --dark-btn-color: rgb(194, 161, 161)
+}
+
+h2 {
+    font-size: 35px;
+}
+
+#box-container {
+    position: relative;
+    margin: auto;
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+    top: 50%;
+
+    width: 40%;
+}
+
+.box {
+    background: var(--light-color);
+    background: var(--background-gradiant);
+
+    padding-top: 10px;
+    padding-bottom: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow: 0 0 30px black;
+
+    width: 100%;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    margin: 5px;
+    font-size: 20px;
+
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
+
+    border-radius: 5px;
+}
+
+button {
+    margin: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 15px;
+}
+
+.confirm-btn {
+    background-color: #efd9d9;
+    color: var(--light-color);
+    border-radius: 5px;
+
+    font-size: 15px;
+    font-weight: bolder;
+
+    transition: .5s;
+}
+
+.confirm-btn:hover {
+    background-color: var(--dark-btn-color);
+    color: var(--dark-color);
+    transition: .5s;
+
+}
