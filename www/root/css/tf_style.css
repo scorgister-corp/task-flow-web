@@ -30,6 +30,11 @@
     src: url("/font/BebasNeue-Regular.ttf");
 }
 
+@font-face {
+    font-family: Netflix;
+    src: url("/font/netflix.woff") format("woff");
+}
+
 body {
     background-color: var(--main-bg-color);
     color: var(--main-color);
@@ -38,7 +43,7 @@ body {
 }
 
 body, pre, textarea, button, a {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Netflix";
 }
 
 footer {
