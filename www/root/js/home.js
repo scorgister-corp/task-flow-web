@@ -33,3 +33,43 @@ if(getCookie("token") != undefined) {
     logBtn.innerText = "Access TaskFlow";
     logBtn.href = "/taskflow/";
 }
+
+
+document.getElementById("form-send").onclick = formSend;
+
+function formSend() {
+    var name = document.getElementById("contact-name").value;
+    var email = document.getElementById("contact-email").value;
+    var msg = document.getElementById("contact-msg").value;
+
+    if(name == "" || name == undefined) {
+        alert("The name is empty");
+        return;
+    }
+    if(email == "" || email == undefined) {
+        alert("The email is empty");
+        return;
+    }
+    if(msg == "" || msg == undefined) {
+        alert("The message is empty");
+        return;
+    }
+
+    if(validateEmail(email) == null) {
+        alert("Invalid email address");
+        return;
+    }
+
+    sendPost("/report", {name: name, email: email, msg: msg}, (success, result) => {
+        console.log(result);
+        if(!success || result["error"] != undefined) {
+            alert("An error occurred");
+            return;
+        }
+        
+        alert("Your message has been successfully saved");
+        document.getElementById("contact-name").value = "";
+        document.getElementById("contact-email").value = "";
+        document.getElementById("contact-msg").value = "";
+    });
+}
