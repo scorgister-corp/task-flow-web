@@ -26,3 +26,10 @@ function defile(){
 }
 
 defile();
+
+if(getCookie("token") != undefined) {
+    var logBtn = document.getElementById("login-btn");
+
+    logBtn.innerText = "Access TaskFlow";
+    logBtn.href = "/taskflow/";
+}

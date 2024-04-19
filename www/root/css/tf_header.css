@@ -35,13 +35,14 @@ header {
 
 #menu-toggle {
     position: relative;
+    margin-left: 30px;
     margin-top: auto;
     margin-bottom: auto;
 }
 
 #menu-toggle input {
     position: absolute;
-    width:40px;
+    width: 40px;
     cursor: pointer;
     opacity: 0; 
     z-index: 8; 
@@ -88,7 +89,7 @@ header {
 
 #menu {
     position: absolute; 
-    left: -400px;
+    left: -450px;
     top: 152px;
     width: 200px;
     height: calc(100vh - 230px);
@@ -105,7 +106,7 @@ header {
 }
 
 #menu-toggle input:checked ~ ul {
-    left: -80px;
+    left: -85px;
 }
 
 #menu > li {
