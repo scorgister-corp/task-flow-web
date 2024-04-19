@@ -161,7 +161,7 @@ header {
     color: white;
 
     padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 70px;
     padding-top: 7px;
     padding-bottom: 10px;
     
@@ -178,7 +178,7 @@ header {
     box-shadow: 0 0 30px var(--light-color);
 }
 
-.search-btn {
+#search-btn {
     display: inline-block;
     position: absolute;
     top: 0;
