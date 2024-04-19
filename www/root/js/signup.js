@@ -1,7 +1,7 @@
 document.getElementById("send-form").onclick = sendForm;
 
 if(getCookie("token") != null) {
-    window.location = "/";
+    window.location = "/taskflow/";
 }
 
 
@@ -17,7 +17,7 @@ function sendForm() {
                 return;
 
             if(result["result"] == 0) {
-                window.location = "/";
+                window.location = "/taskflow/";
                 return;
             }
         });

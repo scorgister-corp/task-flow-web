@@ -17,8 +17,10 @@
     --circle-bottom: -25vh;
 
     --light-color: rgb(84, 24, 43);
+    --medium-color: #711f35;
     --dark-color: rgb(49, 23, 43);
-    --background-gradiant: linear-gradient(130deg, var(--light-color) 50%, var(--dark-color) 100%);
+    --background-gradiant: linear-gradient(135deg, var(--light-color) 50%, var(--dark-color) 100%);
+    --background-dark-gradiant: linear-gradient(135deg, var(--main-header-bg-color) 30%, var(--dark-color) 80%);
 }
 
 body {
@@ -27,33 +29,6 @@ body {
     margin: 0px;
 
     font-family: Consolas, monaco, monospace;
-}
-
-header {
-    background-color: var(--main-header-bg-color);
-    border-style: solid;
-    border-width: 0px;
-    border-bottom-width: var(--main-border-width);
-    border-bottom-color: var(--header-border-color);
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-#header-left {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 10px;
-}
-
-#header-right {
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: 40px;
-
-    font-size: 25px;
 }
 
 footer {
