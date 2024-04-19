@@ -121,7 +121,7 @@ header {
     color: var(--medium-color);
 }
 
-.menu-elt:visited .menu-elt:link {
+.menu-elt:visited, .menu-elt:link {
     color: var(--medium-color);
 
 }
