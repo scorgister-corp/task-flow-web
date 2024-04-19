@@ -83,3 +83,8 @@ h2 {
 .small-hr {
     width: 25%;
 }
+
+.copyright {
+    margin-top: 40px;
+    font-size: 15px;
+}

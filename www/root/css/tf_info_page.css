@@ -1,0 +1,19 @@
+#main {
+    margin-left: 13%;
+    margin-right: 13%;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+p {
+    font-size: 25px;
+}
+
+.part-title {
+    font-weight: bolder;
+}
+
+li {
+    font-size: 25px;
+    margin-left: 20px;
+}
