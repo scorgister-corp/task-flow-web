@@ -20,6 +20,13 @@ header {
     margin-left: 10px;
 }
 
+#header-center {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    position: relative;
+}
+
 #header-right {
     margin-top: auto;
     margin-bottom: auto;
@@ -142,4 +149,51 @@ header {
 
 .menu-elt:visited, .menu-elt:link {
     color: var(--medium-color);
+}
+
+#search-bar {
+    background: var(--background-search-gradiant);
+    box-shadow: 0 0 30px var(--dark-color);
+    border-width: 0px;
+    border-radius: 30px;
+    font-size: 30px;
+    
+    color: white;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 7px;
+    padding-bottom: 10px;
+    
+    display: block;
+    width: 100%;
+    
+    transition: .5s;
+}
+
+#search-bar:focus {
+    outline: none;
+    transition: .5s;
+    
+    box-shadow: 0 0 30px var(--light-color);
+}
+
+.search-btn {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 53px;
+    border: 0;
+    cursor: pointer;
+    background: transparent;
+}
+
+.search-icon {
+    position: absolute;
+    top: 3px;
+    right: 15px;
+    width: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
 }

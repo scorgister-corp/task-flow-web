@@ -16,11 +16,13 @@
 
     --circle-bottom: -25vh;
 
-    --light-color: rgb(84, 24, 43);
     --medium-color: #711f35;
+    --light-color: rgb(84, 24, 43);
     --dark-color: rgb(49, 23, 43);
+
     --background-gradiant: linear-gradient(135deg, var(--light-color) 50%, var(--dark-color) 100%);
     --background-dark-gradiant: linear-gradient(135deg, var(--main-header-bg-color) 30%, var(--dark-color) 80%);
+    --background-search-gradiant: linear-gradient(90deg, var(--light-color) 0%, var(--dark-color) 100%);
 }
 
 body {
