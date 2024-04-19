@@ -31,6 +31,8 @@ footer {
 }
 
 .banner-text {
+    font-style: italic;
+    font-family: "Bebas";
     word-break: keep-all;
 
     font-size: 80px;
