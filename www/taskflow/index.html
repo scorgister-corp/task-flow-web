@@ -8,14 +8,15 @@
     <link rel="stylesheet" href="/css/tf_header.css">
     <link rel="stylesheet" href="/css/tf_mainbox.css">
     <link rel="stylesheet" href="/css/tf_form.css">
+    <link rel="stylesheet" href="/css/index_taskflow.css">
+
     <script lang="javascript" src="/js/request.js"></script>
-    <script lang="javascript" src="/js/header.js"></script>
 </head>
 <body>
     <header>
         <div class="header-container">
             <div id="header-left">
-                <a href="#"><img class="header-icon" src="/img/64x64.png"></a>
+                <a id="header-icon-toggle"><img class="header-icon" src="/img/64x64.png"></a>
                 <div id="menu-toggle">
                     <input id="menu-toggle-btn" type="checkbox">
                     <span></span>
@@ -43,8 +44,27 @@
         </div>
     </header>
     <div id="main">
+        <div id="important-tasks" class="main-box">
+            <h2>important tasks</h2>
+            <div class="main-box-container">
 
+            </div>
+        </div>
+        <div id="today-tasks" class="main-box">
+            <h2>today's tasks</h2>
+
+        </div>
+        <div id="boards" class="main-box">
+            <h2>my boards</h2>
+            <div class="main-box-container">
+                
+            </div>
+        </div>
     </div>
+    <footer class="footer">
+        <p class="copyright">© 2024 Scorgister, corp. All Rights Reserved. | <a href="/policy.html">Privacy Policy</a> | <a href="/terms.html">Terms & Conditions</a></p>
+    </footer>
+    <script lang="javascript" src="/js/header.js"></script>
     <script lang="javascript" src="js/search.js"></script>
 </body>
 </html>

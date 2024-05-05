@@ -3,8 +3,9 @@
     --main-header-bg-color: #000610;
     --main-border-width: 2px;
     --header-border-color: #808080;
-    --main-color: #ffffff;
+    --main-color: #EFD9D9;
     --main-border-radius: 20px;
+    --small-border-radius: 5px;
 
     --main-margin-right: 20px;
     --main-margin-bottom: 0px;
@@ -18,11 +19,11 @@
 
     --medium-color: #711f35;
     --light-color: rgb(84, 24, 43);
-    --dark-color: rgb(49, 23, 43);
-
+    --dark-color: #29172a;
     --background-gradiant: linear-gradient(135deg, var(--light-color) 50%, var(--dark-color) 100%);
     --background-dark-gradiant: linear-gradient(135deg, var(--main-header-bg-color) 30%, var(--dark-color) 80%);
     --background-search-gradiant: linear-gradient(90deg, var(--light-color) 0%, var(--dark-color) 100%);
+    --background-dark-column-gradiant: linear-gradient(180deg, var(--main-header-bg-color) 0%, var(--dark-color) 100%);
 }
 
 @font-face {
@@ -56,6 +57,24 @@ a:link {
 
 a:visited {
     color: #f44336;
+}
+
+.footer {
+    margin-bottom: 0px;
+    background-color: var(--main-header-bg-color);
+
+    border-style: solid;
+    border-width: 0px;
+    border-top-width: var(--main-border-width);
+    border-top-color: var(--header-border-color);
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.copyright {
+    margin-top: 5px;
+    font-size: 15px;
 }
 
 #main {
@@ -95,9 +114,4 @@ h2 {
 
 .small-hr {
     width: 25%;
-}
-
-.copyright {
-    margin-top: 40px;
-    font-size: 15px;
 }

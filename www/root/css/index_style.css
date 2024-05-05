@@ -8,15 +8,7 @@ body {
 
 }
 
-footer {
-    margin-bottom: 0px;
-    background-color: var(--main-header-bg-color);
-
-    border-style: solid;
-    border-width: 0px;
-    border-top-width: var(--main-border-width);
-    border-top-color: var(--header-border-color);
-
+.footer {
     padding-top: 40px;
     padding-bottom: 20px;
 }
