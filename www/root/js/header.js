@@ -1,6 +1,4 @@
 window.addEventListener("click", (e) => {
-    console.log(document.getElementById("menu-toggle-btn").checked);
-
     if(!isMenu(e.target) && e.target != document.getElementById("menu-toggle-btn")) {
         document.getElementById("menu-toggle-btn").checked = false;
     }

@@ -1,3 +1,5 @@
+const API_HOST = "http://localhost:8000";
+
 function createXMLHttpRequest(method, url) {
     var xhr = new XMLHttpRequest();
     xhr.open(method, url, true);
@@ -6,7 +8,7 @@ function createXMLHttpRequest(method, url) {
 }
 
 function sendPost(url, body, response = function() {}) {
-    var xhr = createXMLHttpRequest("POST", "https://api.taskflow.scorgister.net" + url);
+    var xhr = createXMLHttpRequest("POST", API_HOST + url);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.setRequestHeader("Cookies", document.cookie);
 
@@ -27,7 +29,7 @@ function sendPost(url, body, response = function() {}) {
 }
 
 function sendGet(url, response = function() {}) {
-    var xhr = createXMLHttpRequest("GET", "https://api.taskflow.scorgister.net" + url);
+    var xhr = createXMLHttpRequest("GET", API_HOST + url);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.setRequestHeader("Cookies", document.cookie);
 

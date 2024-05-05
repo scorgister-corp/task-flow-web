@@ -10,7 +10,8 @@ function sendForm() {
 
     if(username != undefined && username != "" && password != undefined && password != "") {
         sendPost("/login", {username: username, password: password}, (success, result) => {
-            if(!success) {
+            if(!success || result["error"] != undefined) {
+                document.getElementById("form-status").innerText = "An error occurred";
                 return;
             }
 
@@ -18,6 +19,8 @@ function sendForm() {
                 setCookie("token", result["token"], 15);
                 window.location = "/taskflow/";
                 return;
+            }else {
+                document.getElementById("form-status").innerText = result["message"];
             }
         });
     }

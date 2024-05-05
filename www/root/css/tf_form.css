@@ -24,11 +24,9 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
 
 
 .grad-btn {
-    background: var(--light-color);
-    background: var(--background-gradiant);
-    background-blend-mode: darken;
+    background: var(--main-color);
 
-    color: rgb(206, 206, 206);
+    color: var(--medium-color);
 
     font-size: 25px;
 
@@ -63,4 +61,8 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
 .form-footer {
     margin-left: 30px;
     text-align: start;
+}
+
+#form-status {
+    color: red;
 }
