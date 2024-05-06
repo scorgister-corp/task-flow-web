@@ -1,4 +1,4 @@
-const API_HOST = "http://localhost:8000";
+const API_HOST = "https://api.taskflow.scorgister.net";
 
 function createXMLHttpRequest(method, url) {
     var xhr = new XMLHttpRequest();
