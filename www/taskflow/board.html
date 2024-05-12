@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow</title>
+    <link rel="stylesheet" href="/css/tf_style.css">
+    <link rel="stylesheet" href="/css/tf_header.css">
+    <link rel="stylesheet" href="/css/tf_mainbox.css">
+    <link rel="stylesheet" href="/css/tf_form.css">
+    <link rel="stylesheet" href="/css/index_taskflow.css">
+    <link rel="stylesheet" href="/css/board.css">
+
+    <script lang="javascript" src="/js/request.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div id="header-left">
+                <a id="header-icon-toggle"><img class="header-icon" src="/img/64x64.png"></a>
+                <div id="menu-toggle">
+                    <input id="menu-toggle-btn" type="checkbox">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <ul id="menu">
+                        <li><a class="menu-elt" href="index.html">Home</a></li>
+                        <li><a class="menu-elt" href="#">Rappel</a></li>
+                        <li><a class="menu-elt" href="#">Rappel</a></li>
+                        <br>
+                        <br>
+                        <li><a class="menu-elt" href="/logout">Log Out</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="header-center">
+                <input id="search-bar" type="text">
+                <button id="search-btn"><img class="search-icon" src="/img/search.png"></button>
+            </div>
+            <div id="header-right">
+                <a class="header-right-elt" href="social.html"><img src="/img/social.png" width="45px"></a>
+                <a class="header-right-elt" href="add.html"><img src="/img/add.png" width="40px"></a>
+                <a class="header-right-elt profile-header" href="profile.html"><img src="/img/profile_64x64.png"></a>
+            </div>
+        </div>
+    </header>
+    <div id="full-container" style="display: none;">
+        <div class="box">
+            <h2 id="full-title">Title</h2><br><br>
+            <strong>Deadline: </strong><span id="full-deadline">Deadline</span><br><br>
+            <strong>Description: </strong><span id="full-description">this is a description</span><br><br>
+            <strong>Task complete: </strong><input type="checkbox" id="full-completed"><br><br>
+        </div>
+    </div>
+    <div id="main">
+        <div class="main-box-extanded">
+            <h1 id="board-title" class="box-title">Loading ...</h1>
+            <hr>
+            <div id="members-list">
+                <span style="font-weight: bolder;">Members: </span><br>
+                <div id="members">
+                    <span>Marc, </span>
+                    <span> Marc, </span>
+                    <span> Marc, </span>
+                    <span> Marc, </span>
+                    <span> Pamarc, </span>
+                    <span> Marc, </span>
+                    <span> Marc</span>
+                    <span>Marc, </span>
+                    <span> Marc, </span>
+                    <span> Marc, </span>
+                    <span> Marc, </span>
+                    <span> Pamarc, </span>
+                    <span> Marc, </span>
+                    <span> Marc</span>
+                    <span>Marc, </span>
+                    <span> Marc, </span>
+                    <span> Marc, </span>
+                    <span> Marc, </span>
+                    <span> Pamarc, </span>
+                    <span> Marc, </span>
+                    <span> Marc</span>
+                    <span>Marc, </span>
+                    <span> Marc, </span>
+                    <span> Marc, </span>
+                    <span> Marc, </span>
+                    <span> Pamarc, </span>
+                    <span> Marc, </span>
+                    <span> Marc</span>
+                </div>
+            </div>
+            <div id="priority-container">
+                <div id="hight" class="priority-box"  style="border-right:1px solid var(--main-color);">
+                    <h2 class="priority-title">Hight</h2>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                </div>
+                <div id="medium" class="priority-box">
+                    <h2 class="priority-title">Medium</h2>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                </div>
+                <div id="low" class="priority-box" style="border-left:1px solid var(--main-color);">
+                    <h2 class="priority-title">Low</h2>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                    <button class="task-minim grad-dark-btn">Task</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p class="copyright">© 2024 Scorgister, corp. All Rights Reserved. | <a href="/policy.html">Privacy Policy</a> | <a href="/terms.html">Terms & Conditions</a></p>
+    </footer>
+    <div id="veil" style="display: none;" onclick="restore()"></div>
+    <script lang="javascript" src="/js/header.js"></script>
+    <script lang="javascript" src="js/search.js"></script>
+    <script lang="javascript" src="js/board.js"></script>
+</body>
+</html>

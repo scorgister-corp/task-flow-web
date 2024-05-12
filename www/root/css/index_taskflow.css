@@ -7,41 +7,6 @@
 
 }
 
-.main-box {
-    text-align: center;
-    text-wrap: nowrap;
-    min-width: 35%;
-    min-height: 15%;
-    border-radius: var(--small-border-radius);
-    background: var(--background-dark-column-gradiant);
-
-    margin-top: 50px;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-bottom: 20px;
-
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
-
-    box-shadow: 0 0 25px black;
-}
-
-.main-box-container {
-    height: 300px;
-    position: relative;
-    overflow-x: auto;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-
-    font-size: 27px;
-
-    text-align: left;
-}
-
 .task-elt {
     margin-top: 10px;
     margin-bottom: 10px;
