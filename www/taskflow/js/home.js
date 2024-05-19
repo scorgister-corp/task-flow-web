@@ -8,19 +8,19 @@ sendGet("/tasks", (success, result) => {
     var todayTaskDiv = document.getElementById("today-tasks");
     var boardsDiv = document.getElementById("boards");
 
-    var todayDate = new Date().toISOString();
-    todayDate = todayDate.substring(0, todayDate.indexOf("T"));
-    
+    var todayDate = new Date();
+
     for(var i = 0; i < tasks.length; i++) {
-        var task = tasks[i];
-        
+        var task = tasks[i];   
+
+        var taskDate = new Date(task["deadline"])
+        if(taskDate.getDate() == todayDate.getDate() && taskDate.getMonth() == todayDate.getMonth() && taskDate.getFullYear() == todayDate.getFullYear()) {
+            addTask(todayTaskDiv, task);
+            continue;
+        }
+
         if(task["priority"] > 1) {
             addTask(importantTaskDiv, task);
-        }
-        
-        console.log(task["deadline"] + "  " + todayDate);
-        if(task["deadline"] != null && task["deadline"].startsWith(todayDate)) {
-            console.log(task);
         }
     }
 
