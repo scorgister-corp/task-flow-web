@@ -10,7 +10,7 @@ button {
     font-weight: bolder;
 }
 
-input[type="text"], input[type="email"], input[type="password"], textarea {
+input[type="text"], input[type="email"], input[type="password"], textarea, select {
     margin: 5px;
     font-size: 20px;
 
