@@ -50,14 +50,13 @@
                 <h2 class="box-title">Add task</h2>
                 <input id="title-field" type="text" name="title" placeholder="title" required><br>
                 <textarea id="description-field" name="description" placeholder="description" required></textarea><br>
+                <input id="deadline-field" type="date" name="deadline" placeholder="deadline" required><br>
                 <span>Priority: </span><select id="priority-field">
-                    <option>Low</option>
-                    <option>Medium</option>
-                    <option>Hight</option>
+                    <option value="0">Low</option>
+                    <option value="1">Medium</option>
+                    <option value="2">Hight</option>
                 </select><br>
                 <span>Destination: </span><select id="destination-field">
-                    <option>My boards</option>
-                    <option>Other boards</option>
                 </select><br><br>
                 <span id="form-status"></span>
                 <br><br>
@@ -71,5 +70,6 @@
     <div id="veil" style="display: none;" onclick="restore()"></div>
     <script lang="javascript" src="/js/header.js"></script>
     <script lang="javascript" src="js/search.js"></script>
+    <script lang="javascript" src="js/add.js"></script>
 </body>
 </html>

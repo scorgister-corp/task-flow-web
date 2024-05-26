@@ -22,10 +22,10 @@ function update() {
             return;
         }
 
-        if(result["success"] == false) {
+        if(result["code"] != true) {
             document.getElementById("form-status").innerText = result["message"];
             return;
-        }
+        } 
 
         window.location = "index.html";
     });

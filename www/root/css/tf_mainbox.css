@@ -127,4 +127,6 @@ strong {
     width: 100vw;
     height: 100vh;
     z-index: 10;
+
+    backdrop-filter: blur(10px);
 }
