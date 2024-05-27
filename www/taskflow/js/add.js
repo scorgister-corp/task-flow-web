@@ -12,7 +12,7 @@ function add() {
             return;
         }
 
-        window.location = "board.html=?token=" + destination;
+        window.location = "board.html?token=" + destination;
     });
 }
 
@@ -29,6 +29,18 @@ function loadBoard() {
             op.innerText = elt["name"];
             op.value = elt["token"];
             destination.appendChild(op);
+        }
+
+        var params = new URLSearchParams(document.location.search);
+        var boardToken = params.get("token");
+        if(boardToken == undefined || boardToken == "")
+            return;
+
+        for(var i = 0; i < document.getElementById("destination-field").childElementCount; i++) {
+            if(document.getElementById("destination-field").children[i].value == boardToken) {
+                document.getElementById("destination-field").options.selectedIndex = i;
+                return;
+            }
         }
 
     });

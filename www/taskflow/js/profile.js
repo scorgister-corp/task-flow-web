@@ -18,7 +18,7 @@ function update() {
 
     sendPost("/profile/update", {username: username, email: email, currentPassword: cPassword, newPassword: nPassword}, (success, result) => {
         if(!success || result["error"] != undefined) {
-            document.getElementById("form-status").innerText = "An error occurred";
+            document.getElementById("form-status").innerText = result["message"];
             return;
         }
 

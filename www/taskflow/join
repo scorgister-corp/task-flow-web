@@ -1,0 +1,26 @@
+<script lang="javascript" src="/js/request.js"></script>
+<script lang="javascript">
+    function load() {
+        var params = new URLSearchParams(document.location.search);
+        var boardToken = params.get("token");
+    
+        if(boardToken == undefined || boardToken == "") {
+            alert("Unable to join that board: unknown board");
+            window.location = "index.html";
+            return;
+        }
+
+        sendPost("/join", {token: boardToken}, (success, result) => {
+            if(!success || result["code"] != 1) {
+                alert(result["message"] + ": return to home page !");
+                window.location = "index.html";
+                return;
+            }
+
+            window.location = "board.html?token=" + boardToken;
+            return;
+        });
+    }
+
+    load();
+</script>

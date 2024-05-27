@@ -10,7 +10,12 @@ sendGet("/tasks", (success, result) => {
     var todayDate = new Date();
 
     for(var i = 0; i < tasks.length; i++) {
-        var task = tasks[i];   
+        var task = tasks[i];
+
+        if(task["completed"] == 1) {
+            continue;
+        }
+
         var taskDate = new Date(task["deadline"])
         if(taskDate.getDate() == todayDate.getDate() && taskDate.getMonth() == todayDate.getMonth() && taskDate.getFullYear() == todayDate.getFullYear()) {
             addTask(todayTaskDiv, task);
@@ -43,7 +48,7 @@ function addTask(parentDiv, task) {
 
     var btn = document.createElement("button");
     btn.setAttribute("class", "grad-btn");
-    btn.value = task["board_token"];
+    btn.value = task["board_token"] + "#" + task["id"];
     btn.innerText = "Show";
     btn.onclick = showBoard;
 

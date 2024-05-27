@@ -9,3 +9,17 @@ function search() {
 
     window.location = "search.html?q=" + val;
 }
+
+function load() {
+    var params = new URLSearchParams(document.location.search);
+    var query = params.get("q");
+
+    if(query == undefined || query == "") {
+        return;
+    }
+
+    var val = document.getElementById("search-bar").value = query;
+
+}
+
+load();

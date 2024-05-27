@@ -26,6 +26,9 @@
 
 .task-minim {
     margin-bottom: 25px;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    min-height: 45px;
 }
 
 #members-list {

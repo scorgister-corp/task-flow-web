@@ -25,8 +25,8 @@
                     <span></span>
                     <ul id="menu">
                         <li><a class="menu-elt" href="index.html">Home</a></li>
-                        <li><a class="menu-elt" href="#">Rappel</a></li>
-                        <li><a class="menu-elt" href="#">Rappel</a></li>
+                        <li><a class="menu-elt" href="add.html">Add task</a></li>
+                        <li><a class="menu-elt" href="addboard.html">Add board</a></li>
                         <br>
                         <br>
                         <li><a class="menu-elt" href="/logout">Log Out</a></li>
@@ -46,70 +46,35 @@
     </header>
     <div id="full-container" style="display: none;">
         <div class="box">
-            <h2 id="full-title">Title</h2><br><br>
-            <strong>Deadline: </strong><span id="full-deadline">Deadline</span><br><br>
-            <strong>Description: </strong><span id="full-description">this is a description</span><br><br>
-            <strong>Task complete: </strong><input type="checkbox" id="full-completed"><br><br>
+            <h2 id="full-title" value="-1">Loading...</h2><br><br>
+            <strong id="full-deadline-title">Deadline: </strong><span id="full-deadline">loading...</span><br><br>
+            <strong id="full-description-title">Description: </strong><span id="full-description">loading...</span><br><br>
+            <strong id="full-completed-title">Task completed: </strong><input type="checkbox" id="full-completed"><br><br>
         </div>
     </div>
     <div id="main">
         <div class="main-box-extanded">
             <h1 id="board-title" class="box-title">Loading ...</h1>
+            <button id="share-btn" class="grad-dark-btn">share</button>
             <hr>
             <div id="members-list">
-                <span style="font-weight: bolder;">Members: </span><br>
+                <span id="members-title" style="font-weight: bolder;">Members: </span><br>
                 <div id="members">
                     
                 </div>
             </div>
             <div id="priority-container">
-                <div id="hight" class="priority-box"  style="border-right:1px solid var(--main-color);">
-                    <h2 class="priority-title">Hight</h2>
-                    <button class="task-minim grad-dark-btn">Task</button>
-                    <button class="task-minim grad-dark-btn">Task</button>
-                    <button class="task-minim grad-dark-btn">Task</button>
-                    <button class="task-minim grad-dark-btn">Task</button>
-                    <button class="task-minim grad-dark-btn">Task</button>
-                    <button class="task-minim grad-dark-btn">Task</button>
-                    <button class="task-minim grad-dark-btn">Task</button>
+                <div id="high" class="priority-box"  style="border-right:1px solid var(--main-color);">
+                    <h2 class="priority-title">High</h2>
                 </div>
                 <div id="medium" class="priority-box">
                     <h2 class="priority-title">Medium</h2>
-                    <button class="task-minim grad-dark-btn">Task</button>
-                    <button class="task-minim grad-dark-btn">Task</button>
-                    <button class="task-minim grad-dark-btn">Task</button>
                 </div>
                 <div id="low" class="priority-box" style="border-left:1px solid var(--main-color);">
                     <h2 class="priority-title">Low</h2>
-                    <button class="task-minim grad-dark-btn">Task</button>
-                    <button class="task-minim grad-dark-btn">Task</button>
-                    <button class="task-minim grad-dark-btn">Task</button>
-                    <button class="task-minim grad-dark-btn">Task</button>
-                    <button class="task-minim grad-dark-btn">Task</button>
-                    <button class="task-minim grad-dark-btn">Task</button>
-                    <button class="task-minim grad-dark-btn">Task</button>
-                    <button class="task-minim grad-dark-btn">Task</button>
-                    <button class="task-minim grad-dark-btn">Task</button>
-                    <button class="task-minim grad-dark-btn">Task</button>
-                    <button class="task-minim grad-dark-btn">Task</button>
-                    <button class="task-minim grad-dark-btn">Task</button>
-                    <button class="task-minim grad-dark-btn">Task</button>
-                    <button class="task-minim grad-dark-btn">Task</button>
-                    <button class="task-minim grad-dark-btn">Task</button>
-                    <button class="task-minim grad-dark-btn">Task</button>
-                    <button class="task-minim grad-dark-btn">Task</button>
-                    <button class="task-minim grad-dark-btn">Task</button>
-                    <button class="task-minim grad-dark-btn">Task</button>
-                    <button class="task-minim grad-dark-btn">Task</button>
-                    <button class="task-minim grad-dark-btn">Task</button>
-                    <button class="task-minim grad-dark-btn">Task</button>
-                    <button class="task-minim grad-dark-btn">Task</button>
-                    <button class="task-minim grad-dark-btn">Task</button>
-                    <button class="task-minim grad-dark-btn">Task</button>
-                    <button class="task-minim grad-dark-btn">Task</button>
-                    <button class="task-minim grad-dark-btn">Task</button>
                 </div>
             </div>
+            <button class="grad-dark-btn" id="add-task-shortcut">Add task</button>
         </div>
     </div>
     <footer class="footer">

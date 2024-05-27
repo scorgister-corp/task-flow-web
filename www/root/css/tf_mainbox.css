@@ -104,6 +104,7 @@ h2 {
 
 #full-title {
     font-size: 50px;
+    word-wrap: break-word;
 }
 
 span {
@@ -127,6 +128,6 @@ strong {
     width: 100vw;
     height: 100vh;
     z-index: 10;
-
+    
     backdrop-filter: blur(10px);
 }
