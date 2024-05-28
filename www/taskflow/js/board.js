@@ -3,6 +3,8 @@ function showTask(e) {
     document.getElementById("full-container").style = "display: block;";
     document.getElementById("veil").style = "display: block;";
 
+    document.getElementById("full-delete").value = e.target.id;
+
     sendPost("/task", {id: e.target.id}, (success, result) => {
         document.getElementById("full-title").innerText = result["title"];
 
@@ -77,6 +79,9 @@ function load() {
     shareBtn.value = boardToken;
     shareBtn.onclick = share;
 
+    var delBtn =  document.getElementById("full-delete");
+    delBtn.onclick = del;
+
     document.getElementById("add-task-shortcut").onclick = addShortcut;
 
     sendPost("/board", {token: boardToken}, (success, result) => {
@@ -130,6 +135,16 @@ function load() {
 function share(e) {
     navigator.clipboard.writeText(window.location.origin + "/taskflow/join?token=" + e.target.value);
     alert("Share link copied to clipboard");
+}
+
+function del(e) {
+    if(confirm("Are you sure you want to delete the task " + document.getElementById("full-title").innerText + " ?") == true) {
+        sendPost("/task/delete", {id: e.target.value}, (success, result) => {
+            document.getElementById(e.target.value).parentElement.removeChild(document.getElementById(e.target.value));
+
+            restore();
+        });
+    }
 }
 
 function addShortcut(e) {

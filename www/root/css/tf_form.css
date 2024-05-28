@@ -49,6 +49,19 @@ input[type="text"], input[type="email"], input[type="password"], input[type="dat
     transition: .5s;
 }
 
+.grad-red-btn {
+    background-color: rgb(180, 28, 28);
+
+    color: var(--main-color);
+
+    font-size: 25px;
+
+    border-width: 0px;
+    box-shadow: 0 0 20px var(--dark-color);
+
+    transition: .5s;
+}
+
 .grad-btn:hover {
     box-shadow: 0 0 20px var(--main-header-bg-color);
     transition: .5s;
