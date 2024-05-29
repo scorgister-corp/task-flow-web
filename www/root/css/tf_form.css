@@ -96,3 +96,13 @@ input[type="text"], input[type="email"], input[type="password"], input[type="dat
 .completed {
     background: #3f3f3f;
 }
+
+.field-div {
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+}
+
+.field {
+
+}

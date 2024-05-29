@@ -48,16 +48,18 @@
         <div id="box-container">
             <div class="box">
                 <h2 class="box-title">Add task</h2>
-                <input id="title-field" type="text" name="title" placeholder="title" required><br>
-                <textarea id="description-field" name="description" placeholder="description" required></textarea><br>
-                <input id="deadline-field" type="date" name="deadline" placeholder="deadline" required><br>
-                <span>Priority: </span><select id="priority-field">
-                    <option value="0">Low</option>
-                    <option value="1">Medium</option>
-                    <option value="2">Hight</option>
-                </select><br>
-                <span>Destination: </span><select id="destination-field">
-                </select><br><br>
+                <div class="field-div">
+                    <span>Title: </span><input id="title-field" type="text" name="title" placeholder="title" required><br>
+                    <span>Description*: </span><textarea id="description-field" name="description" placeholder="description" required></textarea><br>
+                    <span>Deadline*: </span><input id="deadline-field" type="date" name="deadline" placeholder="deadline" required><br>
+                    <span>Priority: </span><select id="priority-field">
+                        <option value="0">Low</option>
+                        <option value="1">Medium</option>
+                        <option value="2">Hight</option>
+                    </select><br>
+                    <span>Destination: </span><select id="destination-field">
+                    </select><br><br>
+                </div>
                 <span id="form-status"></span>
                 <br><br>
                 <button id="send-form" class="grad-btn">Save</button>

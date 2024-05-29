@@ -46,10 +46,12 @@
         <div id="box-container">
             <div class="box">
                 <h2 class="box-title">Profile's setting</h2>
-                <input id="username-field" type="text" name="username" placeholder="username" required><br>
-                <input id="email-field" type="email" name="email" placeholder="email" required><br>
-                <input id="current-password-field" type="password" placeholder="current password" required><br>
-                <input id="new-password-field" type="password" placeholder="new password" required><br><br>
+                <div class="field-div">
+                    <span>Username: </span><input id="username-field" type="text" name="username" placeholder="username" required><br>
+                    <span>Email: </span><input id="email-field" type="email" name="email" placeholder="email" required><br>
+                    <span>Cureent password*: </span><input id="current-password-field" type="password" placeholder="current password" required><br>
+                    <span>New Password*: </span><input id="new-password-field" type="password" placeholder="new password" required><br><br>
+                </div>
                 <span id="form-status"></span>
                 <br><br>
                 <button id="send-form" class="grad-btn">Update</button>
