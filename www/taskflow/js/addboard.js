@@ -1,17 +1,12 @@
 function add() {
-    var title = document.getElementById("title-field").value;
+    var title = document.getElementById("title-field").value.trim();
 
 
     sendPost("/addboard", {title: title}, (success, result) => {
-        if(!success || result["code"] != undefined) {
+        if(!success || result["code"] != true) {
             document.getElementById("form-status").innerText = result["message"];
             return;
         }
-
-        if(result["code"] != true) {
-            document.getElementById("form-status").innerText = result["message"];
-            return;
-        } 
 
         window.location = "board.html?token=" + result["token"];
     });

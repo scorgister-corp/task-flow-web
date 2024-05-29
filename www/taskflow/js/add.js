@@ -1,13 +1,13 @@
 
 function add() {
-    var title = document.getElementById("title-field").value;
-    var description = document.getElementById("description-field").value;
-    var deadline = document.getElementById("deadline-field").value;
-    var priority = document.getElementById("priority-field").value;
-    var destination = document.getElementById("destination-field").value;
+    var title = document.getElementById("title-field").value.trim();
+    var description = document.getElementById("description-field").value.trim();
+    var deadline = document.getElementById("deadline-field").value.trim();
+    var priority = document.getElementById("priority-field").value.trim();
+    var destination = document.getElementById("destination-field").value.trim();
 
     sendPost("/add", {title: title, description: description, priority: priority, deadline: deadline, boardToken: destination}, (success, result) => {
-        if(!success || result["error"]) {
+        if(!success || result["code"] != true) {
             showError(result["message"]);
             return;
         }

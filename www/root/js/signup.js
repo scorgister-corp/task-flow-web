@@ -6,8 +6,8 @@ if(getCookie("token") != null) {
 
 
 function sendForm() {
-    var username = document.getElementById("username-field").value;
-    var email = document.getElementById("email-field").value;
+    var username = document.getElementById("username-field").value.trim();
+    var email = document.getElementById("email-field").value.trim();
     var password = document.getElementById("password-field").value;
     var confirmPassword = document.getElementById("confirm-password-field").value;
 

@@ -11,8 +11,8 @@ function load() {
 }
 
 function update() {
-    var username = document.getElementById("username-field").value;
-    var email = document.getElementById("email-field").value;
+    var username = document.getElementById("username-field").value.trim();
+    var email = document.getElementById("email-field").value.trim();
     var cPassword = document.getElementById("current-password-field").value;
     var nPassword = document.getElementById("new-password-field").value;
 

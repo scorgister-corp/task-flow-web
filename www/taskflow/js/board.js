@@ -3,7 +3,14 @@ function showTask(e) {
     document.getElementById("full-container").style = "display: block;";
     document.getElementById("veil").style = "display: block;";
 
+    var params = new URLSearchParams(document.location.search);
+    var boardToken = params.get("token");
+
     document.getElementById("full-delete").value = e.target.id;
+
+    document.getElementById("full-update").value = "id=" + e.target.id
+    if(boardToken != undefined && boardToken != "")
+        document.getElementById("full-update").value += "&token=" + boardToken;
 
     sendPost("/task", {id: e.target.id}, (success, result) => {
         document.getElementById("full-title").innerText = result["title"];
@@ -83,6 +90,9 @@ function load() {
 
     var delBtn =  document.getElementById("full-delete");
     delBtn.onclick = del;
+
+    var updBtn =  document.getElementById("full-update");
+    updBtn.onclick = upd;
 
     document.getElementById("add-task-shortcut").onclick = addShortcut;
 
@@ -164,6 +174,10 @@ function leave(e) {
 function share(e) {
     navigator.clipboard.writeText(window.location.origin + "/taskflow/join?token=" + e.target.value);
     alert("Share link copied to clipboard");
+}
+
+function upd(e) {
+    window.location = "update.html?" + e.target.value;
 }
 
 function del(e) {

@@ -33,7 +33,12 @@ input[type="text"], input[type="email"], input[type="password"], input[type="dat
     border-width: 0px;
     box-shadow: 0 0 20px var(--dark-color);
 
-    transition: .5s;
+    transition: .25s;
+}
+
+.grad-btn:active {
+    background: var(--main-darker-color);
+
 }
 
 .grad-dark-btn {
@@ -46,7 +51,11 @@ input[type="text"], input[type="email"], input[type="password"], input[type="dat
     border-width: 0px;
     box-shadow: 0 0 20px var(--dark-color);
 
-    transition: .5s;
+    transition: .25s;
+}
+
+.grad-dark-btn:active {
+    filter: brightness(75%);
 }
 
 .grad-red-btn {
@@ -59,7 +68,11 @@ input[type="text"], input[type="email"], input[type="password"], input[type="dat
     border-width: 0px;
     box-shadow: 0 0 20px var(--dark-color);
 
-    transition: .5s;
+    transition: .25s;
+}
+
+.grad-red-btn:active {
+    background-color: rgb(150, 0, 0);
 }
 
 .grad-btn:hover {
@@ -103,4 +116,12 @@ input[type="text"], input[type="email"], input[type="password"], input[type="dat
     flex-direction: column;
     margin-left: 30px;
     margin-right: 30px;
+}
+
+a {
+    transition: .25s;
+}
+
+a:active {
+    filter: brightness(75%);
 }

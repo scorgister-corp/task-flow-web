@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Board</title>
+    <title>Update task</title>
     <link rel="stylesheet" href="/css/tf_style.css">
     <link rel="stylesheet" href="/css/tf_header.css">
     <link rel="stylesheet" href="/css/tf_mainbox.css">
@@ -44,48 +44,33 @@
             </div>
         </div>
     </header>
-    <div id="full-container" style="display: none;">
-        <div class="box">
-            <h2 id="full-title" value="-1">Loading...</h2><br><br>
-            <strong id="full-deadline-title">Deadline: </strong><span id="full-deadline">loading...</span><br><br>
-            <strong id="full-description-title">Description: </strong><span id="full-description">loading...</span><br><br>
-            <strong id="full-completed-title">Task completed: </strong><input type="checkbox" id="full-completed"><br><br>
-            <button class="grad-btn" id="full-update">Update</button>
-            <button class="grad-red-btn" id="full-delete">Delete</button><br><br>
-        </div>
-    </div>
     <div id="main">
-        <div class="main-box-extanded">
-            <h1 id="board-title" class="box-title">Loading ...</h1>
-            <button id="share-btn" class="grad-dark-btn" hidden>share</button>
-            <button id="leave-btn" class="grad-red-btn" hidden>leave</button>
-            <hr>
-            <div id="members-list">
-                <span id="members-title" style="font-weight: bolder;" hidden>Members: </span><br>
-                <div id="members">
-                    
+        <div id="box-container">
+            <div class="box">
+                <h2 class="box-title">Update task</h2>
+                <div class="field-div">
+                    <span>Title: </span><input id="title-field" type="text" name="title" placeholder="title" required><br>
+                    <span>Description*: </span><textarea id="description-field" name="description" placeholder="description" required></textarea><br>
+                    <span>Deadline*: </span><input id="deadline-field" type="date" name="deadline" placeholder="deadline" required><br>
+                    <span>Priority: </span><select id="priority-field">
+                        <option value="0">Low</option>
+                        <option value="1">Medium</option>
+                        <option value="2">Hight</option>
+                    </select>
+                    <br><br>
                 </div>
+                <br>
+                <button id="send-form" class="grad-btn">Update</button><br>
+                <span id="form-status"></span>
             </div>
-            <div id="priority-container">
-                <div id="low" class="priority-box" style="border-right:1px solid var(--main-color);"">
-                    <h2 class="priority-title">Low</h2>
-                </div>
-                <div id="medium" class="priority-box">
-                    <h2 class="priority-title">Medium</h2>
-                </div>
-                <div id="high" class="priority-box" style="border-left:1px solid var(--main-color);">
-                    <h2 class="priority-title">High</h2>
-                </div>
-            </div>
-            <button class="grad-dark-btn" id="add-task-shortcut">Add task</button>
         </div>
     </div>
-    <footer class="footer">
+    <footer>
         <p class="copyright">© 2024 Scorgister, corp. All Rights Reserved. | <a href="/policy.html">Privacy Policy</a> | <a href="/terms.html">Terms & Conditions</a></p>
     </footer>
     <div id="veil" style="display: none;" onclick="restore()"></div>
     <script lang="javascript" src="/js/header.js"></script>
     <script lang="javascript" src="js/search.js"></script>
-    <script lang="javascript" src="js/board.js"></script>
+    <script lang="javascript" src="js/update.js"></script>
 </body>
 </html>
