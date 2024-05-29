@@ -17,7 +17,13 @@ function sendForm() {
 
             if(result["connection"]) {
                 setCookie("token", result["token"], 15);
-                window.location = "/taskflow/";
+                var params = new URLSearchParams(document.location.search);
+                var redirect = params.get("redirect");
+                if(redirect != undefined && redirect != "")
+                    window.location = redirect;
+                else
+                    window.location = "/taskflow/";
+
                 return;
             }else {
                 document.getElementById("form-status").innerText = result["message"];
