@@ -3,7 +3,7 @@ function add() {
 
 
     sendPost("/addboard", {title: title}, (success, result) => {
-        if(!success || result["error"] != undefined) {
+        if(!success || result["code"] != undefined) {
             document.getElementById("form-status").innerText = result["message"];
             return;
         }
