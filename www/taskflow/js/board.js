@@ -79,6 +79,8 @@ function load() {
     shareBtn.value = boardToken;
     shareBtn.onclick = share;
 
+    document.getElementById("leave-btn").value = boardToken;
+
     var delBtn =  document.getElementById("full-delete");
     delBtn.onclick = del;
 
@@ -107,9 +109,24 @@ function load() {
             var spn = document.createElement("span");
             spn.innerText = result["members"][result["members"].length - 1];
             membersContainer.appendChild(spn);
-        }else
-            document.getElementById("members-title").hidden = true;
 
+            var leaveBtn = document.getElementById("leave-btn");
+            document.getElementById("share-btn").style = "right: 10%; position: relative;";
+            leaveBtn.style = "left: 10%; position: relative;";
+
+            if(result["members"].length == 1)
+                leaveBtn.innerText = "delete";
+
+            leaveBtn.onclick = leave;
+            leaveBtn.hidden = false;
+            shareBtn.hidden = false;
+            document.getElementById("members-title").hidden = false;
+
+        }else {
+            document.getElementById("members-title").hidden = true;
+            document.getElementById("leave-btn").hidden = true;
+            document.getElementById("share-btn").hidden = true;
+        }
 
     });
 
@@ -130,6 +147,18 @@ function load() {
         if(window.location.hash != "")
             window.location = window.location;
     });
+}
+
+function leave(e) {
+    if(confirm("Are you sure you want to delete the board " + document.getElementById("board-title").innerText + " ?") == true)
+        sendPost("/board/leave", {token: e.target.value}, (success, result) => {
+            if(!success || result["code"] != true) {
+                alert(result["message"]);
+                return;
+            }
+
+            window.location = "index.html";
+        });
 }
 
 function share(e) {

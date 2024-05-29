@@ -1,4 +1,13 @@
 document.getElementById("send-form").onclick = sendForm;
+document.getElementById("username-field").addEventListener("keydown", inputEvent);
+document.getElementById("password-field").addEventListener("keydown", inputEvent);
+
+function inputEvent(event) {
+    if(event.key == "Enter") {
+        sendForm();
+        return;
+    }
+}
 
 if(getCookie("token") != null) {
     window.location = "/taskflow/";

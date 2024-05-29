@@ -97,5 +97,13 @@
     <footer class="footer">
         <p class="copyright">© 2024 Scorgister, corp. All Rights Reserved. | <a href="/policy.html">Privacy Policy</a></p>
     </footer>
+    <script lang="javascript">
+        if(getCookie("token") != undefined) {
+            var logBtn = document.getElementById("login-btn");
+
+            logBtn.innerText = "Access TaskFlow";
+            logBtn.href = "/taskflow/";
+        }
+    </script>
 </body>
 </html>
